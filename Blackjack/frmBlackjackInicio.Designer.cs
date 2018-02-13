@@ -64,6 +64,7 @@
             this.btnCpu.TabIndex = 3;
             this.btnCpu.Text = "CPU";
             this.btnCpu.UseVisualStyleBackColor = true;
+            this.btnCpu.Click += new System.EventHandler(this.btnCpu_Click);
             // 
             // pictureBox1
             // 

@@ -12,10 +12,36 @@ namespace Blackjack
 {
     public partial class frmBlackJackMultiplayer : Form
     {
-        
+        bool auto;
         Random rnd = new Random();
         int plataJ1, plataJ2, apuestaTotal, apostoJ1, apostoJ2,apuestaJ1, apuestaJ2;
         int pedir, repartir, parar, cantJ1, cantJ2, asJ1C1, asJ1C2, asJ2C1, asJ2C2, resultado, partGanJ1, partGranJ2;
+
+        /*
+       Requisitos adicionales:
+        - El juego debe acumular el puntaje(partidas ganadas) y valor acumulado de cada jugador
+        durante varias partidas. El jugador que gane queda con un valor acumulado = apuesta
+        propia + apuesta del otro jugador.
+        - Cuando un jugador gana dos veces seguidas, su puntaje acumulado y valor acumulado se
+        triplica.
+        - Implementar la variante de un solo jugador contra el computador (o contra la casa)
+        conservando las mismas reglas descritas anteriormente
+         * */
+
+        public frmBlackJackMultiplayer(bool automatico)
+        {
+            InitializeComponent();
+            auto = automatico;
+            lblPuntJ1.Text = "0";
+            lblPuntJ2.Text = "0";
+            lblPlataJ1.Text = "100000";
+            lblPlataJ2.Text = "100000";
+        }
+
+        private void frmBlackJack_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnApostarJ1_Click(object sender, EventArgs e)
         {
@@ -111,39 +137,6 @@ namespace Blackjack
             btnApostarJ1.Enabled = false;
         }
 
-    
-
-
-        /*
-       Requisitos adicionales:
-        - El juego debe acumular el puntaje(partidas ganadas) y valor acumulado de cada jugador
-        durante varias partidas. El jugador que gane queda con un valor acumulado = apuesta
-        propia + apuesta del otro jugador.
-        - Cuando un jugador gana dos veces seguidas, su puntaje acumulado y valor acumulado se
-        triplica.
-        - Implementar la variante de un solo jugador contra el computador (o contra la casa)
-        conservando las mismas reglas descritas anteriormente
-         * */
-
-
-        public frmBlackJackMultiplayer()
-        {
-            InitializeComponent();
-
-            lblPuntJ1.Text = "0";
-            lblPuntJ2.Text = "0";
-            lblPlataJ1.Text = "100000";
-            lblPlataJ2.Text = "100000";
-            
-
-        }
-
-        private void frmBlackJack_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-       
         private void logicaJuego()
         {
             cantJ1 = Convert.ToInt32(lblCantJ1.Text);
@@ -229,7 +222,11 @@ namespace Blackjack
             lblCarta5J2.Visible = false;
             lblResultadoJ1.Visible = false;
             lblResultadoJ2.Visible = false;
+            if (auto)
+            {
+                lblCarta1J2.Visible = false;
 
+            }
 
             for (int i = 0; i < 4; i++)
             {

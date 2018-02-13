@@ -25,10 +25,14 @@ namespace Blackjack
 
         private void btnMultiplayer_Click(object sender, EventArgs e)
         {
-            frmBlackJackMultiplayer blackjackMultiplayer = new frmBlackJackMultiplayer();
+            frmBlackJackMultiplayer blackjackMultiplayer = new frmBlackJackMultiplayer(false);
             blackjackMultiplayer.ShowDialog();
+        }
 
-
+        private void btnCpu_Click(object sender, EventArgs e)
+        {
+            frmBlackJackMultiplayer blackjackMultiplayer = new frmBlackJackMultiplayer(true);
+            blackjackMultiplayer.ShowDialog();
         }
     }
 }
