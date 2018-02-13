@@ -37,9 +37,9 @@ namespace Blackjack
        
         private void logicaJuego()
         {
-            if ((cantJ1 < 21) ||(cantJ2<21))
+            if ((cantJ1 > 21))
             {
-
+                lblResultadoJ1.Text = "PERDISTE";
             }
 
 

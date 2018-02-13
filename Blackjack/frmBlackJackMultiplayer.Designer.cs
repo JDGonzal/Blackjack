@@ -42,8 +42,10 @@
             this.btnRepartir = new System.Windows.Forms.Button();
             this.btnPedirCarta = new System.Windows.Forms.Button();
             this.btnParar = new System.Windows.Forms.Button();
-            this.lblPuntajeJ1 = new System.Windows.Forms.Label();
-            this.lblPuntajeJ2 = new System.Windows.Forms.Label();
+            this.lblCantJ1 = new System.Windows.Forms.Label();
+            this.lblCantJ2 = new System.Windows.Forms.Label();
+            this.lblResultadoJ1 = new System.Windows.Forms.Label();
+            this.lblResultadoJ2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCarta1J1
@@ -176,23 +178,43 @@
             this.btnParar.UseVisualStyleBackColor = true;
             this.btnParar.Click += new System.EventHandler(this.btnParar_Click);
             // 
-            // lblPuntajeJ1
+            // lblCantJ1
             // 
-            this.lblPuntajeJ1.BackColor = System.Drawing.Color.White;
-            this.lblPuntajeJ1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPuntajeJ1.Location = new System.Drawing.Point(205, 24);
-            this.lblPuntajeJ1.Name = "lblPuntajeJ1";
-            this.lblPuntajeJ1.Size = new System.Drawing.Size(69, 34);
-            this.lblPuntajeJ1.TabIndex = 18;
+            this.lblCantJ1.BackColor = System.Drawing.Color.White;
+            this.lblCantJ1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantJ1.Location = new System.Drawing.Point(205, 24);
+            this.lblCantJ1.Name = "lblCantJ1";
+            this.lblCantJ1.Size = new System.Drawing.Size(69, 34);
+            this.lblCantJ1.TabIndex = 18;
             // 
-            // lblPuntajeJ2
+            // lblCantJ2
             // 
-            this.lblPuntajeJ2.BackColor = System.Drawing.Color.White;
-            this.lblPuntajeJ2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPuntajeJ2.Location = new System.Drawing.Point(755, 24);
-            this.lblPuntajeJ2.Name = "lblPuntajeJ2";
-            this.lblPuntajeJ2.Size = new System.Drawing.Size(69, 34);
-            this.lblPuntajeJ2.TabIndex = 19;
+            this.lblCantJ2.BackColor = System.Drawing.Color.White;
+            this.lblCantJ2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantJ2.Location = new System.Drawing.Point(755, 24);
+            this.lblCantJ2.Name = "lblCantJ2";
+            this.lblCantJ2.Size = new System.Drawing.Size(69, 34);
+            this.lblCantJ2.TabIndex = 19;
+            // 
+            // lblResultadoJ1
+            // 
+            this.lblResultadoJ1.BackColor = System.Drawing.Color.White;
+            this.lblResultadoJ1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblResultadoJ1.Location = new System.Drawing.Point(69, 226);
+            this.lblResultadoJ1.Name = "lblResultadoJ1";
+            this.lblResultadoJ1.Size = new System.Drawing.Size(205, 59);
+            this.lblResultadoJ1.TabIndex = 20;
+            this.lblResultadoJ1.Visible = false;
+            // 
+            // lblResultadoJ2
+            // 
+            this.lblResultadoJ2.BackColor = System.Drawing.Color.White;
+            this.lblResultadoJ2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblResultadoJ2.Location = new System.Drawing.Point(619, 226);
+            this.lblResultadoJ2.Name = "lblResultadoJ2";
+            this.lblResultadoJ2.Size = new System.Drawing.Size(205, 59);
+            this.lblResultadoJ2.TabIndex = 21;
+            this.lblResultadoJ2.Visible = false;
             // 
             // frmBlackJackMultiplayer
             // 
@@ -200,8 +222,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(889, 322);
-            this.Controls.Add(this.lblPuntajeJ2);
-            this.Controls.Add(this.lblPuntajeJ1);
+            this.Controls.Add(this.lblResultadoJ2);
+            this.Controls.Add(this.lblResultadoJ1);
+            this.Controls.Add(this.lblCantJ2);
+            this.Controls.Add(this.lblCantJ1);
             this.Controls.Add(this.btnParar);
             this.Controls.Add(this.btnPedirCarta);
             this.Controls.Add(this.btnRepartir);
@@ -237,8 +261,10 @@
         private System.Windows.Forms.Button btnRepartir;
         private System.Windows.Forms.Button btnPedirCarta;
         private System.Windows.Forms.Button btnParar;
-        private System.Windows.Forms.Label lblPuntajeJ1;
-        private System.Windows.Forms.Label lblPuntajeJ2;
+        private System.Windows.Forms.Label lblCantJ1;
+        private System.Windows.Forms.Label lblCantJ2;
+        private System.Windows.Forms.Label lblResultadoJ1;
+        private System.Windows.Forms.Label lblResultadoJ2;
     }
 }
 
