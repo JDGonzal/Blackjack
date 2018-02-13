@@ -16,7 +16,7 @@ namespace Blackjack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBlackJackMultiplayer());
+            Application.Run(new frmBlackJack21());
         }
     }
 }
